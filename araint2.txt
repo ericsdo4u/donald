@@ -1,0 +1,14 @@
+public class araint2{
+public static void main(String[] args){
+
+final int[] Array_length = 10;
+
+int[] arry = new int[Array_length];
+for(int counter = 0; counter < array.length; conuter++){
+array[counter] = 2+2* counter;
+
+}
+System.out.printf("%s%8s%n", "index", "value");
+
+for(int counter = 0; counter < array.length; counter++){
+	System.out.printf("%sd%8d%n", counter, array[counter]);
