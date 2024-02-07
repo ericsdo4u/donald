@@ -1,23 +1,46 @@
-public class CheckValidation2{
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class CheckValidation1{
 public static void main(String[] args){
 Scanner input = new Scanner(System.in);
 
+CheckValidation2 validateCard = new CheckValidation2();
+
 System.out.println("Enter credit card for validtion: ");
-String digit = input.nextLine();
+String creditCardNumbers  = input.nextLine();
 
-long cardNumber = Long.parseLong(digit);
+while(creditCardNumbers.length() > 16 || creditCardNumbers.length() < 13){
 
-long[] checkCard = new long[digit.length()];
+System.out.println("Enter credit card for validtion Check Between 13 digit and 16 digit: ");
+ creditCardNumbers  = input.nextLine();
 
- for( int i = digit.length() -1; i >= 0; i--){
-
-checkCard[i] = cardNumber  % 10;
-
-cardNumber /= 10;
 
 }
 
-System.out.println(getCreditCardType(checkCard));
+validateCard.setCreditCardDigit(creditCardNumbers);
+String cardNumbers = validateCard.getCreditCardDigit();
+
+long[] cardArray = validateCard.getCreditCardArray(cardNumbers);
+
+String cardType = validateCard.getCreditCardType(cardArray);
+
+long checkValid = validateCard.cardDigitSort(cardArray);
+
+String cardValidity = validateCard.creditCardValidityStatus(checkValid);
 
 
+System.out.println("**************************************");
+
+System.out.println("**Credit Card Type: "+cardType);
+
+System.out.println("**Credit Card Number: " + cardNumbers);
+
+System.out.println("**Credit card Digit Length: " + cardNumbers.length());
+
+System.out.println("**Credit Card Validity Status: " + cardValidity);
+
+System.out.println("**************************************");
+
+}
 }

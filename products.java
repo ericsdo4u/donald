@@ -6,14 +6,14 @@ public class products {
 
    Scanner input = new Scanner(System.in);
 
-     System.out.println(" Enter 2 numbers : ");
+     System.out.println(" Enter 2 numbers seperated by space : ");
 
       int num1 = input.nextInt();
       int num2 = input.nextInt();
 
 int productOfNumbers = productOfTwoNumbers(num1, num2);
 
-System.out.println("The sum of " + num1 + " and " + num2 +  " = " +productOfNumbers);
+System.out.println("The product of " + num1 + " and " + num2 +  " = " +productOfNumbers);
 
 }
 

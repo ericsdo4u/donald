@@ -14,14 +14,15 @@ int counter = 1;
 
 int result = 0;
 
-if( userInput <= 0 || userInput >= 24){
-System.out.println(" Invalid number Input, please enter 1 to 24 ");
-
-}
-
 while(counter <= 24){
 
 result = userInput * counter;
+
+if( userInput <= 1 || userInput >= 24){
+System.out.println(" Invalid number Input, please enter 1 to 24 ");
+
+break;
+}
 
 System.out.printf("%n %d x %d = %d" ,userInput, counter, result); 
 

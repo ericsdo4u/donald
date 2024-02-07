@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DateOFBirth{
+public class DateOfBirth{
 
  public static void main(String[] args){
 
